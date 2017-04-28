@@ -2,12 +2,12 @@ package game;
 
 public class GameState 
 {
-	GameState game_State;
+	static GameState game_State;
 	boolean state = false;
 	
 	private GameState(){}
 	
-	public GameState getInstance()
+	public static GameState getInstance()
 	{
 		if(game_State == null)
 			game_State = new GameState();
