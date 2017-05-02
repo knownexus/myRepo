@@ -16,14 +16,17 @@ public class GameLoop
         return ourInstance;
     }
 
-    public void gameLoop(GameState _game_State, UserInput _uInput, Player _player1, Treasure _chest)
+    public void gameLoop(GameState _game_State, Player _player1, Treasure _chest)
     {
         while (_game_State.getState()) //game Loop
         {
             System.out.println("Please enter a direction or type \"quit\" to quit!");
-            _uInput.checkInput(_player1); //Check player1 user input
+            UserInput.checkInput(_player1); //Check player1 user input
 
-            if (_game_State.getState() == false)
+            
+            
+            
+            if (!_game_State.getState())
                 break;
 
             System.out.println("Your location: " + _player1.getCoords());

@@ -29,11 +29,11 @@ public class Trap extends GameEntity implements Observer
             System.out.println("You stood on a trap! You have been thrown back to 0,0");
             this.setActive(false);
         }
-		/* //For debugging
+		 //For debugging
         else
         {
             System.out.println("Distance from trap: " + getDistance(this.subject));
         }
-        */
+        
     }
 }

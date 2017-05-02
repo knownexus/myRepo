@@ -2,8 +2,8 @@ package businessLogic.singletons;
 
 public class GameState
 {
-	static GameState ourInstance;
-	boolean state = false;
+	private static GameState ourInstance;
+	private boolean state = false;
 	
 	private GameState(){}
 	

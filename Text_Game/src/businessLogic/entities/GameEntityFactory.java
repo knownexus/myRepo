@@ -1,6 +1,6 @@
 package businessLogic.entities;
 
-public class Factory
+public class GameEntityFactory
 {
     public GameEntity createEntity(String _type)
     {
@@ -11,7 +11,6 @@ public class Factory
                 entity = new Player();
                 break;
         }
-
         return entity;
     }
 

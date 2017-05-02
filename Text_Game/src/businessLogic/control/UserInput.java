@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class UserInput
 {
-	public Scanner scan = new Scanner(System.in);
+	public static Scanner scan = new Scanner(System.in);
 	
-	public String scan(){return scan.nextLine();}
+	public static String scan(){return scan.nextLine();}
 	
-	public void checkInput(Player _player1)
+	public static void checkInput(Player _player1)
 	{
 		String input = scan().toLowerCase();
 		System.out.println("===========================================");

@@ -42,10 +42,7 @@ abstract public class GameEntity
 	
 	public String getCoords()
 	{
-		String xLocation = Integer.toString(this.getXLocation());
-		String yLocation =  Integer.toString(this.getYLocation());
-		
-		return xLocation + "," + yLocation;
+		return Integer.toString(this.getXLocation()) + "," + Integer.toString(this.getYLocation());
 	}
 	
 	public int randomLocation(int _lesserMin, int _lesserMax, int _greaterMin, int _greaterMax)
@@ -68,10 +65,7 @@ abstract public class GameEntity
 		/*Distance between objects on X and Y*/
         double yDistance =  _subject.getYLocation() - this.getYLocation() ;
 
-		/*Value for pythagoras calculation*/
-        double yDistanceSquared = yDistance * yDistance;
-
-        return yDistanceSquared;
+        return yDistance * yDistance;
     }
 
     public double getXDistance(Player _subject)
@@ -79,21 +73,14 @@ abstract public class GameEntity
 		/*Distance between objects on X and Y*/
         double xDistance =  _subject.getXLocation() - this.getXLocation();
 
-		/*Value for pythagoras calculation*/
-        double xDistanceSquared = xDistance * xDistance;
-
-        return xDistanceSquared;
+        return xDistance * xDistance;
     }
 
     public String getDistance(Player _subject)
     {
-        double xDistanceSquared = getXDistance(_subject);
-        double yDistanceSquared = getYDistance(_subject);
-
-        double totalDistance = Math.sqrt(xDistanceSquared + yDistanceSquared);
+        double totalDistance = Math.sqrt(getXDistance(_subject) + getYDistance(_subject));
 
         DecimalFormat decimalFormat = new DecimalFormat("#0.00");
-
 
         return decimalFormat.format(totalDistance);
     }

@@ -5,7 +5,7 @@ import businessLogic.singletons.GameState;
 
 public class Treasure extends GameEntity implements Observer
 {
-	Player subject;
+	private Player subject;
 	
 	public Treasure(Player _subject)
 	{
@@ -14,10 +14,6 @@ public class Treasure extends GameEntity implements Observer
 		setXLocation(randomLocation(this.lesserMinBounds, this.lesserMaxBounds, this.greaterMinBounds, this.greaterMaxBounds));
 		setYLocation(randomLocation(this.lesserMinBounds, this.lesserMaxBounds, this.greaterMinBounds, this.greaterMaxBounds));
 	}
-	public Treasure()
-    {
-
-    }
 
 	@Override
 	public void update()

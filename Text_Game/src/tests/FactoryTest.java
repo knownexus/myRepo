@@ -1,7 +1,7 @@
 package tests;
 
 import businessLogic.entities.Player;
-import businessLogic.entities.Factory;
+import businessLogic.entities.GameEntityFactory;
 import businessLogic.entities.Trap;
 import businessLogic.entities.Treasure;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class FactoryTest
 {
-    Factory factory = new Factory();
+    GameEntityFactory factory = new GameEntityFactory();
 
     @Test
     public void createEntityTest()
