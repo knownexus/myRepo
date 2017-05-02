@@ -1,30 +1,36 @@
-package game;
+package businessLogic.control;
+
+import businessLogic.entities.Player;
+import businessLogic.singletons.GameState;
+
+import java.util.Scanner;
 
 public class UserInput
 {
-	java.util.Scanner scan = new java.util.Scanner(System.in);
+	public Scanner scan = new Scanner(System.in);
 	
 	public String scan(){return scan.nextLine();}
 	
-	public void checkInput(game.Entities.Player player1)
+	public void checkInput(Player _player1)
 	{
 		String input = scan().toLowerCase();
+		System.out.println("===========================================");
 		switch (input)
 		{
 		case "north":
-			player1.goNorth();
+			_player1.goNorth();
 			break;
 			
 		case "south":
-			player1.goSouth();
+			_player1.goSouth();
 			break;
 			
 		case "east":
-			player1.goEast();
+			_player1.goEast();
 			break;
 			
 		case "west":
-			player1.goWest();
+			_player1.goWest();
 			break;
 			
 		case "quit":

@@ -1,17 +1,16 @@
-package game;
+package businessLogic.singletons;
 
-public class GameState 
+public class GameState
 {
-	static GameState game_State;
+	static GameState ourInstance;
 	boolean state = false;
 	
 	private GameState(){}
 	
 	public static GameState getInstance()
 	{
-		if(game_State == null)
-			game_State = new GameState();
-		return game_State;
+		if(ourInstance == null)	ourInstance = new GameState();
+		return ourInstance;
 	}
 	
 	public boolean getState()
