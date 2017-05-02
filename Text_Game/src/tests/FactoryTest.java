@@ -1,9 +1,9 @@
 package tests;
 
-import game.businessLogic.entities.Player;
-import game.businessLogic.entities.Factory;
-import game.businessLogic.entities.Trap;
-import game.businessLogic.entities.Treasure;
+import businessLogic.entities.Player;
+import businessLogic.entities.Factory;
+import businessLogic.entities.Trap;
+import businessLogic.entities.Treasure;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

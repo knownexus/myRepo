@@ -1,6 +1,6 @@
 package tests;
 
-import game.businessLogic.singletons.GameState;
+import businessLogic.singletons.GameState;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
