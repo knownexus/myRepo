@@ -8,4 +8,5 @@ public interface Observer
 	Player subject = new Player();
 	
 	public abstract void update();
+	
 }

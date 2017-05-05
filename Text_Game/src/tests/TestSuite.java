@@ -7,16 +7,11 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses(
         {
-            tests.FactoryTest.class,
-            tests.GameLoopTest.class,
-            tests.GameStateTest.class,
-            tests.PlayerTest.class
+            FactoryTest.class,
+            GameLoopTest.class,
+            GameStateTest.class,
+            PlayerTest.class
         }
 )
 
-public class TestSuite
-{
-
-
-
-}
+public class TestSuite{}
