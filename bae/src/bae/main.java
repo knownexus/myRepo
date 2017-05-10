@@ -1,8 +1,11 @@
 package bae;
 
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
 
 public class main {
 	
@@ -19,6 +22,9 @@ public class main {
 		
 		List<Person> peeps = new ArrayList<Person>();
 		List<Animal> animu = new ArrayList<Animal>();
+		
+		//System.out.println(Arrays.toString(people));
+		//System.out.println(people.length);
 		
 		createPeople(fm, people, peeps);
 		System.out.println();
@@ -70,7 +76,7 @@ public class main {
 			}
 		}
 		if (count > 0)
-			System.out.println("People with cats earn, on average: £" + total/count);
+			System.out.println("People with cats earn, on average: ï¿½" + total/count);
 		else
 			System.out.println("Noone owns a cat");
 	}
@@ -131,13 +137,14 @@ public class main {
 		for (String person : people) 
 		{
 			String[] info = fm.parsePerson(person, ",");
-			String[] temp = fm.parseText(info[3], "£");
+			String[] temp = fm.parseText(info[3], "Â£");
+			System.out.println(temp.length);
 			StringBuilder sb = new StringBuilder();
 			sb.append(temp[1]);
 			
 			int wage = Integer.parseInt(sb.toString());
 			peeps.add(new Person(info[0], info[1], info[2], wage));
-			System.out.println(info[0] + " earns £" + wage);
+			System.out.println(info[0] + " earns ï¿½" + wage);
 		}
 	}
 }
